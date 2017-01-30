@@ -29,14 +29,6 @@ public class ResidualValueCalculator {
         residualValue = applyCountryRule(residualValue, asset);
 
         return residualValue;
-
-        /*
-        if (asset.getCountryOfOrigin() == "USA") {
-            return asset.getPurchasePrice() + 1;
-        } else {
-            return asset.getPurchasePrice();
-        }
-        */
     }
 
     private long applyCountryRule(long residualValue, Asset asset) {
