@@ -14,7 +14,7 @@ public class HelloController {
 
     @RequestMapping(value = "/", produces = MimeTypeUtils.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
     public Greeting hello() {
-        return new Greeting("Hello from heroku!!!");
+        return new Greeting("Hello from CI world!");
     }
 
 }
