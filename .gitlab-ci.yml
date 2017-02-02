@@ -66,7 +66,8 @@ deploy:jdk8:
   # Use stage test here, so the pages job may later pickup the created site.
   stage: test
   script:
-    - 'mvn $MAVEN_CLI_OPTS deploy site site:stage'
+    - gem install dpl
+    - dpl --provider=heroku --app=microservices-learning --api-key=$HEROKU_PRODUCTION_API_KEY
   only:
     - master
   # Archive up the built documentation site.
@@ -91,3 +92,10 @@ pages:
   only:
     - master
 
+production:
+  type: deploy
+  script:
+  - gem install dpl
+  - dpl --provider=heroku --app=microservices-learning --api-key=$HEROKU_PRODUCTION_API_KEY
+  only:
+  - master
