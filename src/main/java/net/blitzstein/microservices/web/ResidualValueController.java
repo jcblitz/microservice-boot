@@ -35,7 +35,6 @@ public class ResidualValueController {
 
     @ApiOperation(value = "Calculates the residual value for an asset with a given lease term")
     public ResidualCalculation value(@RequestParam("leaseTerm") int leaseTerm) {
-        String JSONTemplate = "{ \"residualValue\" : \"%s\" }";
         long residualValue = residualValueCalculator.forAsset(ASSET, leaseTerm);
         ResidualCalculation residualCalculation = new ResidualCalculation(ASSET, residualValue);
         return residualCalculation;
