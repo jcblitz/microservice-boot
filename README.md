@@ -37,6 +37,8 @@ It defaults to `8080`
 
 I have CircleCI monitoring `master` and automatically running the tests on commit and automatically running the tests on commit. The results are send to the `#builds` slack channel.
 
+I'm also toying with using gitlab CI if we want to use gitlab for Git hosting and code review.
+
 [CircleCI](https://circleci.com/)
 
 
